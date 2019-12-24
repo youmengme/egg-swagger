@@ -1,6 +1,3 @@
-# hackernews-async-ts
-
-[Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
 
 ## QuickStart
 
@@ -21,13 +18,7 @@ $ npm run tsc
 $ npm start
 ```
 
-### Npm Scripts
+### swagger
 
-- Use `npm run lint` to check code style
-- Use `npm test` to run unit test
-- se `npm run clean` to clean compiled js at development mode once
+`npm run dev` 启动后在浏览器输入`http://127.0.0.1:7001/api-doc`
 
-### Requirement
-
-- Node.js 8.x
-- Typescript 2.8+
