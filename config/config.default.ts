@@ -13,7 +13,11 @@ export default (appInfo: EggAppInfo) => {
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
-  };
+  }
+
+  config.view = {
+    mapping: { '.html': 'ejs' },
+  }
 
   // the return config will combines to EggAppConfig
   return {

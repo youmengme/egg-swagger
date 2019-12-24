@@ -1,12 +1,14 @@
 import { Controller } from 'egg';
-import { Get, Prefix } from 'egg-shell-change'
+import { Get, Description, Render, Prefix } from 'egg-shell-change'
 
 @Prefix('/')
 export default class HomeController extends Controller {
 
   @Get('')
+  @Description('首页')
+  @Render
   public async index() {
     const { ctx } = this;
-    ctx.body = await ctx.service.test.sayHi('egg');
+    await ctx.render('index', {})
   }
 }

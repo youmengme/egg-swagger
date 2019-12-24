@@ -24,7 +24,8 @@
   "dependencies": {
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
-    "egg-shell-change": "^1.1.0"
+    "egg-shell-change": "^1.1.0",
+    "egg-view-ejs": "^2.0.0"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.40",
