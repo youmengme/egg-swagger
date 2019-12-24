@@ -1,4 +1,10 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
+const specSequelize = require('sequelize')
+const sequelizeCLSNamespace = require('cls-hooked').createNamespace('your-namespace')
+specSequelize.useCLS(sequelizeCLSNamespace)
+exports.sequelize = {
+  Sequelize: specSequelize
+}
 
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
@@ -16,7 +22,18 @@ export default (appInfo: EggAppInfo) => {
   }
 
   config.view = {
-    mapping: { '.html': 'ejs' },
+    mapping: {
+      '.html': 'ejs'
+    },
+  }
+
+  config.sequelize = {
+    dialect: 'mysql',
+    host: '127.0.0.1',
+    port: 3306,
+    database: 'test',
+    username: 'test',
+    password: 'test'
   }
 
   // the return config will combines to EggAppConfig
